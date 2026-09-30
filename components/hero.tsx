@@ -3,15 +3,32 @@ import AppPreview1 from "@/public/images/previews/bookScreen.png";
 import AppPreview2 from "@/public/images/previews/publishScreen.png";
 import LogoApple from "@/public/images/logo-apple.png";
 import LogoGooglePlay from "@/public/images/logo-google-play.png";
-import { Sparkles, Bike, Footprints, Zap, Bus, Car } from "lucide-react";
+import { Sparkles, Bike, Footprints, Zap, Bus, Car, ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative py-16 md:py-24 lg:py-32 min-h-screen">
+    <section className="relative pt-6 pb-16 md:pt-8 md:pb-24 lg:pt-10 lg:pb-32 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <a
+          href="https://waiis.eco/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative mb-10 flex flex-col items-center justify-between gap-4 overflow-hidden rounded-2xl bg-[#5831A8] px-6 py-6 text-white shadow-sm transition-colors hover:bg-[#48258F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5831A8] focus-visible:ring-offset-4 sm:flex-row sm:px-8 lg:mb-12"
+        >
+          <span aria-hidden="true" className="pointer-events-none absolute -right-8 -top-20 h-48 w-48 rounded-full border-[24px] border-white/5" />
+          <span className="relative flex flex-wrap items-center justify-center gap-x-2 text-lg font-medium sm:justify-start">
+            {t("waiis_banner_intro")}
+            <span className="text-2xl font-bold tracking-tight text-[#F5E85B]">Waiis</span>
+          </span>
+          <span className="relative inline-flex shrink-0 items-center gap-2 rounded-full bg-[#F5E85B] px-4 py-2 text-sm font-semibold text-[#382067]">
+            {t("waiis_cta")}
+            <ArrowUpRight aria-hidden="true" className="h-4 w-4 transition-transform motion-safe:group-hover:-translate-y-0.5 motion-safe:group-hover:translate-x-0.5" />
+          </span>
+          <span className="sr-only">{t("waiis_new_tab")}</span>
+        </a>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="text-center lg:text-left space-y-8">
